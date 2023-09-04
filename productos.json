@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Comida 1",
+    "description": "Comida para gatos",
+    "code": "ABC123",
+    "price": 150,
+    "status": true,
+    "stock": 12,
+    "category": "gatos",
+    "thumbnails": []
+  },
+  {
+    "id": 2,
+    "title": "Comida 2",
+    "description": "Descripción Comida 2",
+    "code": "ABC124",
+    "price": 200,
+    "status": true,
+    "stock": 10,
+    "category": "perros",
+    "thumbnails": []
+  },
+  {
+    "id": 3,
+    "title": "Nuevo Producto",
+    "description": "Descripción del nuevo producto",
+    "code": "NEW001",
+    "price": 15.99,
+    "status": true,
+    "stock": 20,
+    "category": "Otros",
+    "thumbnails": []
+  }
+]
