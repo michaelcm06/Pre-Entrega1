@@ -32,15 +32,18 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Rutas
 app.use('/products', productsRoutes);
-app.use('/cart', cartsRoutes);
+app.use('/carts', cartsRoutes);
 app.use('/views', viewsRoutes);
 
 app.get('/', (req, res) => {
-  res.render('index'); // Esto renderizará 'views/index.handlebars'
+  res.render('index'); 
 });
 
 app.get('/products', (req, res) => {
-  res.render('products'); // Esto renderizará 'views/index.handlebars'
+  res.render('products'); 
+});
+app.get('/carts', (req, res) => {
+  res.render('carts'); 
 });
 
 

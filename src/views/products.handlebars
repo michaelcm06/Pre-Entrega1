@@ -15,7 +15,7 @@
 
 
 <a href="/products?pagina=1">Pág.1</a>
-
+<div class="cart" data-cart-id="1">
 {{#if hasPrevPage}}
 <a href="/products?pagina={{prevPage}}">Prev.Pág.</a>
 {{else}}
@@ -29,5 +29,13 @@
 {{/if}}
 
 <a href="/products?pagina={{totalPages}}">Ult.Pág</a>
+</div>
+<script>
+  // Inicializar cartId usando una variable global
+  const cartId = "{{cartId}}";
+  const productId = "{{productId}}";
+</script>
 
-    <script src="/js/main.js"></script>
+<a href="/carts">Carrito de Compras</a>
+
+<script src="/js/main.js"></script>

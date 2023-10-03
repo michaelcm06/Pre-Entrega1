@@ -15,11 +15,17 @@ const getProducts = async (req, res) => {
       if (query === 'disponibles') {
         filter.availability = true;
       }
-      if (query === 'Gatos') {
-        filter.category = "Gatos";
+      if (query === 'Carne') {
+        filter.category = "Carne";
       }
-      if (query === 'Perros') {
-        filter.category = "Perros";
+      if (query === 'Pollo') {
+        filter.category = "Pollo";
+      }
+      if (query === 'Saludable') {
+        filter.category = "Saludable";
+      }
+      if (query === 'Dieta') {
+        filter.category = "Dieta";
       }
     }
 
