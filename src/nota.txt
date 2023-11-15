@@ -1,0 +1,31 @@
+Hola Janm, buenas tardes. Te paso algunas correcciones que deberías realizar:
+
+-ya cuando ingresas a localhost:8080, te muestra en el menu todas las opciones, incluyendo PERFIL y LOGOUT. Debieran estar esas filtradas. Es un detalle, pero cuando puedas arreglalo
+
+-ya  El login de Github funciona aparentemente bien. Pude ingresar sin problemas. Muy bien. 
+
+- ya Hay sin embargo algo mal organizado en el código: fijate que si ingresas (sin logearte) a localhost:8080/products, te deja acceder. Sin problemas. Y esa ruta (entre otras...)
+ debiera estar protegida. Por otro lado, dentro del passport.config, en tu estrategia 'jwt'
+ utilizas como callback el /products. Se podría, pero luego tenes que tener en products el 
+ passport.authenticate. Lo correcto sería que tu callback este en el router de sesiones.
+ De hecho lo tenes codificado así. Luego, en ese endpoint /api/sessions/callbackGithub, si todo sale bien, redireccionas a products.
+
+- ya otra cosa que debieras organizar mejor: las respuestas que funcionan con render debieran estar todas en tu router de vistas. Vos tenes el render de products (no verifiqué el resto de las vistas) dentro de tu controlador. El controlador solo debiera devolver algunos datos, como ser un array con productos, por ej. O hacer un alta en la DB de un producto dado. Pero no tiene mucho que ver que hagas ahí el render. Insisto: lo que tiene que ver con vistas, debiera resolverse en el router de vistas. Usando seguramente tu manager de productos, en este caso.
+
+- ¿como haces para proteger, de manera ordenada, y reutilizando código, tu vista de productos? eso debieras hacerlo
+ con los middlewares auth (en esta instancia, previo a jwt), pero al quedar el render dentro de tu controlador, 
+ empezas o a duplicar middlewares, o a tener que exportarlos dentro del controlador. Podría funcionar (más o menos lo tenes andando),
+  pero no es luego simple para hacer debug. 
+
+- la estrategia local, por ej., está a priori perfecta. Me pude registrar. Luego hacer el login.
+ Y veo que está configurado con passport, y bien. Como lo vimos en clase. Esa parte está perfecta. 
+
+
+
+Miré esa parte solamente. Te dejo aprobada la entrega. La funcionalidad está lograda para la estrategia local, 
+y en parte para la de GitHub. Más por favor no dejes de revisar y repensar un poco la organización de tu router 
+de vistas, y tu controlador de productos. Lo mismo si tenes funcionando el router de carritos de manera parecida. 
+
+ 
+
+Cualquier duda me avisas.  
