@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>realtimeproducts</title>
+
+</head>
+<body>
+    {{{body}}}
+ 
+                                              
+       <form id="form">
+        <h1>Agregar Producto</h1>
+        <label for="title">title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="price">price:</label>
+        <input type="text" id="price" name="price" required>
+
+        <label for="description">description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="category">category:</label>
+        <input type="text" id="category" name="category" required>
+       
+        <label for="code">codigo:</label>
+        <input type="text" id="code" name="codigo" required>
+       
+        <label for="stock">stock:</label>
+        <input type="text" id="stock" name="stock" required>
+
+        <button type="submit">Crear</button>
+    </form>
+
+
+    <form id="del">
+        <h1>Eliminar Producto</h1>
+        <label for="idp">Introduce el Id del producto que deseas eliminar</label>
+        
+        <input type="text" id="idp" name="idp" required>
+
+       
+        <button type="submit">Eliminar</button>
+    </form>
+  <script src="/socket.io/socket.io.js"></script> 
+ <script  src="home.js"></script>
+
+
+</body>
+</html>
